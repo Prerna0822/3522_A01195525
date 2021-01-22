@@ -39,8 +39,11 @@ def multiply(a, b):
 
 # Function for division of two numbers.
 def div(a, b):
-    divide_numbers = a / b
-    print("Division is " + " " + str(divide_numbers))
+    if b == 0:
+        print("Division by 0 not possible.")
+    else:
+        divide_numbers = a/b
+        print("Division is " + " " + str(divide_numbers))
 
 
 # Printing the output according to the option chose by the user.
@@ -54,3 +57,5 @@ elif i == 4:
     multiply(length_one, length_two)
 elif i == 5:
     div(length_one, length_two)
+else:
+    print("Invalid option.Please choose between 1-5.")
